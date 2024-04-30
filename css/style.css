@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* CSS Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --Light: #fff;
+    --shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+}
+
+.wrapper {
+    display: grid;
+    gap: 20px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4em;
+}
+
+.main-nav ul {
+    display: grid;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main-nav a {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+    background: var(--dark);
+    color: var(--Light);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 3fr 0.7fr;
+    grid-template-areas: "grid-head grid-head grid-head" "grid-main grid-main grid-main" "grid-main grid-main grid-main" "footer footer footer";
+    height: 100vh;
+    margin: 2em;
+}
+
+section.grid-main {
+    grid-area: grid-main;
+    background: #fffadf;
+    background-image: url('gym.jpg');
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+section.footer {
+    grid-area: footer;
+    background: #9dc2a7;
+}
+
+section.grid-head {
+    grid-area: grid-head;
+    background: #658fc2;
+}
